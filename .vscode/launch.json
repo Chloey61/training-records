@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+  
+      {
+        "type": "pwa-node",
+        "request": "launch",
+        "name": "Launch Program",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "program": "${workspaceFolder}\\2-浏览器工作原理\\case8-9-10-11-12-13-14\\clients.js"
+      }
+    ]
+  }

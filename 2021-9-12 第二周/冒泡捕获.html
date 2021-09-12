@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                text-align: center;
+            }
+            #dom1 {
+                width: 50vw;
+                height: 50vh;
+                background: #000;
+            }
+
+            #dom2 {
+                width: 10vw;
+                height: 10vh;
+                background: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="dom1">
+            <div id="dom2"></div>
+        </div>
+    </body>
+    <script>
+        let dom1 = document.getElementById('dom1');
+        let dom2 = document.getElementById('dom2');
+        // 默认是冒泡，
+        dom1.addEventListener('click', () => {
+            console.log('dom1');
+        });
+        dom2.addEventListener('click', () => {
+            console.log('dom2');
+        });
+    </script>
+</html>

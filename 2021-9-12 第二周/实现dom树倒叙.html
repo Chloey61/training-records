@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+    </head>
+
+    <body>
+        <div id="d1">
+            <h1>1</h1>
+            <h2>2</h2>
+            <h3>3</h3>
+            <h4>4</h4>
+        </div>
+    </body>
+    <script>
+        // 原始写法
+        let element = document.getElementById('d1');
+        function reverseChild(element) {
+            // element.children拿到的是一个html集合，并非是数组
+            let childInfo = Array.prototype.slice.call(element.children);
+            childInfo.reverse();
+            element.innerHTML = '';
+            for (let child of childInfo) {
+                element.appendChild(child);
+            }
+        }
+        reverseChild(element);
+    </script>
+</html>
